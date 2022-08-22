@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Admissions{% endblock title %}
+
+{% block body %}
+<div class="container my-3 ">
+    <h1 class = "text-center"> ADMISSION FORM </h1>
+    <form method="post" action="/application_form">
+    {% csrf_token %}
+
+        <div class ="mb-3">
+            <label for="text" class ="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
+
+        <div class = "mb-3">
+            <label for="text" class = "form-label">Father's Name</label>
+            <input type="father" class = "form-control" id = "father" name="father" aria-describedby="father">
+
+        <div class="mb-3">
+            <label for="number" class="form-label" >CNIC NO.</label>
+            <input type=" id_number" class = "form-control" id "id_number" name="id_number" aria-describedby="id_number">   
+
+        <div class="mb-3">
+          <label for="text" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="email">
+          <div id="email" class="form-text">We'll never share your email with anyone else.</div>
+          
+        <div class="mb-3">
+            <label for="number" class = "form-label" >Phone Number</label>
+            <input type="number" class="form-control" id ="number" name="number" aria-describedby="number">
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+
+</div>
+
+{% endblock body %}
